@@ -67,7 +67,7 @@ func TestDoScrapWithoutRouteSelector(t *testing.T)  {
 		[]*ScrapDescriptor{
 			&descriptor,
 		})
-	ret := scrapper.doScrap()
+	ret := scrapper.DoScrap()
 
 	img := ret["googleImg@http://www.google.com"][0]
 
@@ -99,7 +99,7 @@ func TestDoScrapWithRouteSelector(t *testing.T)  {
 		[]*ScrapDescriptor{
 			&descriptor,
 		})
-	ret := scrapper.doScrap()
+	ret := scrapper.DoScrap()
 
 	if ret == nil {
 		t.Errorf("There was no result")

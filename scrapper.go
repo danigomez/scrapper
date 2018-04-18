@@ -41,7 +41,7 @@ func NewScrapper(domain string, descriptor []*ScrapDescriptor) Scrapper {
 	return Scrapper{domain, descriptor}
 }
 
-func (s Scrapper) doScrap() (ret ScrapResult) {
+func (s Scrapper) DoScrap() (ret ScrapResult) {
 	ret = make(ScrapResult)
 	response, err := http.Get(s.domain)
 
